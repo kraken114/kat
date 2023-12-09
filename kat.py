@@ -18,3 +18,7 @@ def in_for_mAP_true(batch):
     i[0] = int(i[0])
     i[1] = int(i[1])
   return ground_date
+
+save_path = 'ДИПЛОМ_6_3_SSD(итог_с_mAP)_САМОЛЕТЫ.pth'
+torch.save(model.state_dict(), save_path)
+!du -hsc {save_path} # size of the model on disk
